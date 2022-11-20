@@ -1,0 +1,64 @@
+<%- include('../../common/includes/head.ejs',{pageTitle:"Sign-up"}) %> 
+<link rel="stylesheet" href="/styles/forms.css">
+<link rel="stylesheet" href="/styles/auth.css">
+
+</head>
+<%- include('../../common/includes/header.ejs') %> 
+
+<body>
+    <main id="sign-up-container">
+        <h1>Create New Account</h1>
+
+        <% if (inputData.hasError) {  %> 
+            <h4 id="error-message-auth"><%= inputData.message %> </h4>
+            <% } %> 
+
+        <form action="" method="POST">
+            <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>">
+            <section id="validation-info">
+                <div class="sign-up-info">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" value="<%= inputData.email %>" required>
+                </div>
+                <div class="sign-up-info">
+                    <label for="confirm-email">Confirm Email</label>
+                    <input type="email" name="confirm-email" id="confirm-email" value="<%= inputData['confirm-email']%>" required>
+                </div>
+                <div class="sign-up-info">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" minlength="6" maxlength="12" value="<%= inputData.password %>" required>
+                </div>
+            </section>
+
+            <hr>
+
+            <section id="personal-info">
+                <div class="sign-up-info">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" name="fullname" id="fullname" value="<%= inputData.fullname%>" required>
+                </div>
+                <div class="sign-up-info">
+                    <label for="street">Street</label>
+                    <input type="text" name="street" id="street" value="<%= inputData.street%>" required>
+                </div>
+                <div class="sign-up-info">
+                    <label for="postal-code">Postal Code</label>
+                    <input type="text" name="postal-code" id="postal-code" maxlength="5" minlength="5" value="<%= inputData['postal-code']%>" required>
+                </div>
+                <div class="sign-up-info">
+                    <label for="city">City</label>
+                    <input type="text" name="city" id="city" value="<%= inputData.city%>" required>
+                </div>
+            </section>
+
+            <button class="btn">Create Account</button>
+
+            <a href="/login">Login Instead</a>
+
+
+
+        </form>
+    </main>
+</body>
+
+</html>

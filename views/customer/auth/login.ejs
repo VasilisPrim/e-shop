@@ -1,0 +1,36 @@
+<%- include('../../common/includes/head.ejs',{pageTitle:"Login"}) %> 
+<link rel="stylesheet" href="/styles/forms.css">
+<link rel="stylesheet" href="/styles/auth.css">
+
+</head>
+<%- include('../../common/includes/header.ejs') %> 
+
+
+<body>
+    <main>
+        <h1>Login</h1>
+        <% if (inputData.hasError) {  %> 
+            <h4 id="error-message-auth"><%= inputData.message %> </h4>
+            <% } %> 
+
+        <form action="" method="POST">
+            <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>">
+
+                <div class="sign-up-info">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" value="<%= inputData.email %>" required>
+                </div>
+                <div class="sign-up-info">
+                    <label for="email">Password</label>
+                    <input type="password" name="password" id="password" value="<%= inputData.password %>" required>
+                </div>
+           
+            <button class="btn">Login</button>
+            <a href="/sign-up">Create a new user</a>
+    </main>
+</body>
+
+
+
+
+</html>

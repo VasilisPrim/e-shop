@@ -1,0 +1,28 @@
+
+h1{
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--color-gray-300);
+}
+
+hr{
+    border-color: var(--color-primary-200);
+    margin: var(--space-4);
+}
+
+
+
+
+
+
+form a{
+    text-decoration: none;
+    display: block;
+    color: var(--color-primary-200);
+    margin-top: 0.8rem;
+}
+
+form a:hover,
+form a:active {
+    color: var(--color-primary-400);
+}
