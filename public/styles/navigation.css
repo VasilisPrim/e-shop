@@ -151,6 +151,10 @@ nav ul li a {
   margin: 0.2rem var(--space-2);
 }
 
+.nav-items a{
+  width: 100%
+}
+
 .nav-items button {
   cursor: pointer;
   font: inherit;
@@ -226,11 +230,16 @@ nav ul li a {
   .nav-items {
     flex-direction: row;
   }
+  .nav-items li{
+    padding: 0.4rem;
+  }
 
   .nav-items a {
-    padding: var(--space-2) var(--space-4);
+    display: block;
+    padding: var(--space-2) var(--space-2);
     border-radius: var(--border-radius-small);
     color: var(--color-primary-500);
+    width: 7.5rem;
   }
 
   .nav-items a:hover,

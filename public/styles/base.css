@@ -109,6 +109,21 @@ a:active {
   background-color: var(--color-primary-700);
   border-color: var(--color-primary-700);
 }
+.error p{
+    
+    color: var(--color-gray-50);
+    width: 20rem;
+    margin: 2rem auto;
+  }
+
+
+  .badge {
+  margin-left: var(--space-2);
+  padding: 0.15rem var(--space-4);
+  border-radius: 10rem;
+  background-color: var(--color-primary-500);
+  color: var(--color-primary-500-contrast);
+  }
 
 @media (min-width: 48rem) {
   #error-message-auth {
@@ -118,13 +133,21 @@ a:active {
   h1,h2,#admin-new-product  {
     width: 60rem;
     margin: 1rem auto;
-    padding-left: 5rem;
+    padding-left: 4rem;
     text-align: left;
   }
 
   #logo{
     padding: 0.5rem;
   }
+
+  
+  /* .error a{
+    display: block;
+    text-align: center;
+    width: 50%;
+    margin: 1rem auto;
+  } */
   
   
 
